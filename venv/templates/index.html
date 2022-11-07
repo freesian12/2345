@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>이삼사오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=IBM+Plex+Sans+KR:wght@100;200;300;400;600;700&family=Sunflower:wght@300;500;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<div class="maintitle">
+    <a href="/"><img id="logo" src="../../static/img/logo.png" width="600" height="200"></a>
+</div>
+<!--상단의 팀원들 프로필 이미지-->
+<div class="mybox">
+       <div>
+           <div class="row row-cols-1 row-cols-md-5 g-5">
+               <a href="javascript:show_layer('1')">
+                   <div class="col">
+                       <div id="image1" onclick="show_order('1')" class="card">
+                           <img src="../static/img/김우상/main.jpg"
+                                class="card-img-top" alt="...">
+                           <div class="card-body">
+                               <h5 class="card-title">김우상</h5>
+                               <p class="card-text">팀장</p>
+                           </div>
+                       </div>
+                   </div>
+               </a>
+               <div class="col"><a href="javascript:show_layer('2')">
+                   <div id="image2" onclick="show_order('2')" class="card">
+                       <img src="../static/img/황준호/main.jpg"
+                            class="card-img-top" alt="...">
+                       <div class="card-body">
+                           <h5 class="card-title">황준호</h5>
+                           <p class="card-text">팀원</p>
+                       </div>
+                   </div>
+               </a></div>
+               <div id="image3" onclick="show_order('3')" class="col"><a href="javascript:show_layer('3')">
+                   <div class="card">
+                       <img src="../static/img/이정은/main.jpg"
+                            class="card-img-top" alt="...">
+                       <div class="card-body">
+                           <h5 class="card-title">이정은</h5>
+                           <p class="card-text">팀원</p>
+                       </div>
+                   </div>
+               </a></div>
+               <div onclick="show_order('4')" class="col"><a href="javascript:show_layer('4')">
+                   <div id="image4" class="card">
+                       <img src="../static/img/심대호/main.jpg"
+                            class="card-img-top" alt="...">
+                       <div class="card-body">
+                           <h5 class="card-title">심대호</h5>
+                           <p class="card-text">팀원</p>
+                       </div>
+                   </div>
+               </a></div>
+               <div onclick="show_order('5')" class="col"><a href="javascript:show_layer('5')">
+                   <div id="image5" class="card">
+                       <img src="../static/img/한지은/main.jpg"
+                            class="card-img-top" alt="...">
+                       <div class="card-body">
+                           <h5 class="card-title">한지은</h5>
+                           <p class="card-text">팀원</p>
+                       </div>
+                   </div>
+               </a></div>
+           </div>
+       </div>
+   </div>
+
+<div id="div_00" class="title">
+    <div class="intro">
+        <h2 style="font-size: 60px; color:navy;">이삼사오</h2>
+        <p style="font-size: 20px; color: gray">
+            92년생 부터 95년생 까지, 아이셔같이 상큼한 9n년생 대표모임
+        </p>
+        <p class="btn">
+            <button onclick="javascript:obj()" type="button">목표</button>
+            <button onclick="javascript:pro()" type="button">약속</button>
+        </p>
+    </div>
+    <div class="obj-pro">
+        <div id="obj" style="display: none">
+            Lorem ipsum dolor sit amet, consectetur
+        </div>
+        <div id="pro" style="display: none">
+            Lorem ipsum dolor sit amet, consectetur a
+        </div>
+    </div>
+</div>
+
+<!--메인페이지 하단 팀원 소개 영역-->
+<div class="keyword-box" id="div_01" style="display: none">
+    <div class="content">
+        <h2><a href="/detail?name=김우상">김우상</a></h2>
+        <nav>
+            <ul id="team-keyd1" class="keyword">
+
+            </ul>
+        </nav>
+    </div>
+    <!--슬라이드 영역-->
+    <div class="slider">
+        <div class="slider-inner">
+            <a href="#">
+                <img class="big-img" src="../static/img/김우상/1.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/김우상/3.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/김우상/4.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/김우상/5.jpg" slide_type="slide">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="keyword-box" id="div_02" style="display: none">
+    <div class="content">
+        <h2><a href="/detail?name=황준호">황준호</a></h2>
+        <nav>
+            <ul id="team-keyd2" class="keyword">
+
+               </ul>
+        </nav>
+    </div>
+    <!--슬라이드 영역-->
+    <div class="slider">
+        <div class="slider-inner">
+            <a href="#">
+                <img class="big-img" src="../static/img/황준호/1.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/황준호/2.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/황준호/3.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/황준호/4.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/황준호/5.jpg" slide_type="slide">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="keyword-box" id="div_03" style="display: none">
+    <div class="content">
+        <h2><a href="/detail?name=이정은">이정은</a></h2>
+        <nav>
+            <ul id="team-keyd3" class="keyword">
+
+               </ul>
+        </nav>
+    </div>
+    <!--슬라이드 영역-->
+    <div class="slider">
+        <div class="slider-inner">
+            <a href="#">
+                <img class="big-img" src="../static/img/이정은/1.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/이정은/6.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/이정은/5.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/이정은/4.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/이정은/7.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/이정은/2.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/이정은/3.jpg" slide_type="slide">
+            </a>
+
+        </div>
+    </div>
+</div>
+<div class="keyword-box" id="div_04" style="display: none">
+    <div class="content">
+        <h2><a href="/detail?name=심대호">심대호</a></h2>
+        <nav>
+            <ul id="team-keyd4" class="keyword">
+
+               </ul>
+        </nav>
+    </div>
+    <!--슬라이드 영역-->
+    <div class="slider">
+        <div class="slider-inner">
+            <a href="#">
+                <img class="big-img" src="../static/img/심대호/1.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/심대호/2.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/심대호/3.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/심대호/4.jpg" slide_type="slide">
+            </a>
+        </div>
+    </div>
+
+</div>
+<div class="keyword-box" id="div_05" style="display: none">
+    <div class="content">
+        <h2><a href="/detail?name=한지은">한지은</a></h2>
+        <nav>
+            <ul id="team-keyd5" class="keyword">
+
+               </ul>
+        </nav>
+    </div>
+
+<!--슬라이드 영역-->
+    <div class="slider">
+        <div class="slider-inner">
+            <a href="#">
+                <img class="big-img" src="../static/img/한지은/1.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/한지은/2.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/한지은/3.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/한지은/4.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/한지은/5.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/한지은/6.jpg" slide_type="slide">
+            </a>
+            <a href="#">
+                <img class="big-img" src="../static/img/한지은/7.jpg" slide_type="slide">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+<script src="../static/script.js"></script>
+</html>
